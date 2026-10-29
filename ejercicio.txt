@@ -1,0 +1,67 @@
+Design System: Calculadora IMC
+
+Primario · Teal
+#009688
+AppBar, botones e íconos
+
+Primario oscuro
+#00695C
+Títulos y énfasis
+
+Secundario
+#03A9F4
+Detalles complementarios
+
+Fondo
+#E0F2F1
+Fondo de la aplicación
+
+
+Resultado
+#E1F5FE
+Contenedor del IMC
+
+
+Texto principal
+#263238
+Textos y etiquetas
+
+
+
+*******************************
+
+lib/
+├── main.dart
+├── estructura/
+│   ├── columna.dart
+│   └── fila.dart
+├── pantallas/
+│   ├── inicio.dart
+│   ├── calculadora.dart
+└── tema/
+    ├── colores.dart
+    ├── tipografia.dart
+    └── tema_app.dart
+
+
+********************************
+
+Tipografia
+
+24.22
+displaySmall · 40 px · Negrita
+
+Calculadora de IMC
+headlineMedium · 28 px · Negrita
+
+Ingresa tus datos
+titleLarge · 25 px · Negrita
+
+Conoce tu índice de masa corporal ingresando tu peso y estatura.
+bodyLarge · 16 px · Regular
+
+
+
+*********************************
+
+Configurar el tema global

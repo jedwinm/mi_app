@@ -28,7 +28,7 @@ class _PantallaCalculadoraState extends State<PantallaCalculadora> {
 
           setState(() {
             imc = 0;
-            mensaje ="Ingresa valores váidos";
+            mensaje ="Ingresa valores válidos";
           });
 
         return;
@@ -103,10 +103,78 @@ class _PantallaCalculadoraState extends State<PantallaCalculadora> {
             ),
             const SizedBox( height: 20),
             
-            // segunda fila
-          ],
+            Row(
+              children: [
+                const Icon(Icons.height, size: 50),
+                const SizedBox(width: 15),
+                Expanded(
+                  child: TextField(
+                    controller: alturaController,
+                    keyboardType: 
+                      const TextInputType.numberWithOptions(
+                        decimal: true,
+                      ),
+                    decoration: const InputDecoration(
+                      labelText: "Estatura en cm",
+                      border: OutlineInputBorder(),
+                    ),
+                  )
+                ),
+              ],
+            ),
 
-          
+            const SizedBox(height: 30,),
+
+            ElevatedButton(
+              onPressed: calcularIMC, 
+              child: const Text("Calcular IMC"),
+              ),
+
+            
+            const SizedBox(height: 30),
+
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(25),
+              color: Colors.lightBlue,
+
+              child: Column(
+                children: [
+                  const Text(
+                    'Tu resultado',
+                    style: TextStyle(fontSize: 24),
+                  ),
+
+                  const SizedBox(height: 10),
+                  
+                  Text(
+                    imc == 0 ? '--' : imc.toStringAsFixed(2),
+                    style: const TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.teal
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  Text(
+                    mensaje,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox( height: 20),
+
+            TextButton(
+              onPressed: (){ Navigator.pop(context);}, 
+              child: const Text("Volver al inicio"),
+            ),
+
+            // segunda fila
+          ],          
         ),
       ),
     );
