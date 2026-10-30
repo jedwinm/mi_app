@@ -26,6 +26,9 @@ Texto principal
 #263238
 Textos y etiquetas
 
+Texto Secundario
+#546E7A
+
 
 
 *******************************

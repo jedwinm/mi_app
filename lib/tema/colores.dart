@@ -15,7 +15,10 @@ class ColoresApp {
 
   // textos
   static const Color texto = Color(0XFF263238);
+  static const Color textoSecundario = Color(0XFF546E7A);
   
-
   // estados
+  static const Color error = Color(0xFFB3261E);
 }
+
+// color: ColoresApp.supercifie
